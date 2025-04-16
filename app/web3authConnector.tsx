@@ -63,7 +63,7 @@ export default function Web3AuthConnectorInstance(chains: Chain[]) {
       mode: "light",
     },
     web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET,
-    enableLogging: true,
+    enableLogging: false,
   });
 
   externalAdapters.forEach((adapter) => {
