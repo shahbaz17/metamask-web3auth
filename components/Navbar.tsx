@@ -3,8 +3,15 @@
 import Image from "next/image";
 import { useConnect, useAccount, useDisconnect } from "wagmi";
 import { useState } from "react";
-
+import { MetaMaskSDK } from "@metamask/sdk";
 import { walletServicesPlugin } from "@/app/web3authConnector";
+
+const MMSDK = new MetaMaskSDK({
+  dappMetadata: {
+    name: "MetaMask Web3Auth Integration",
+    url: window.location.href,
+  },
+});
 
 export function Navbar() {
   const { connect, connectors } = useConnect();
@@ -21,10 +28,17 @@ export function Navbar() {
   };
 
   const showWalletUI = async () => {
-    console.log("showWalletUI");
-    await walletServicesPlugin.showWalletUi({
-      show: true,
-    });
+    if (window.ethereum) {
+      const signResult = await MMSDK.connectAndSign({
+        msg: "Sign in to MetaMask x Web3Auth Integration",
+      });
+      console.log(signResult);
+      // Display the signResult in the UI
+    } else {
+      await walletServicesPlugin.showWalletUi({
+        show: true,
+      });
+    }
   };
 
   return (
