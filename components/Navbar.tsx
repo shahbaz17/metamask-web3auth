@@ -2,14 +2,28 @@
 
 import Image from "next/image";
 import { useConnect, useAccount, useDisconnect } from "wagmi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { walletServicesPlugin } from "@/app/web3authConnector";
+import { MetaMaskSDK } from "@metamask/sdk";
+import { toast } from "react-toastify";
 
 export function Navbar() {
   const { connect, connectors } = useConnect();
   const { address, isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const [isCopied, setIsCopied] = useState(false);
+  const [MMSDK, setMMSDK] = useState<MetaMaskSDK | null>(null);
+
+  useEffect(() => {
+    const sdk = new MetaMaskSDK({
+      dappMetadata: {
+        name: "MetaMask Web3Auth Integration",
+        url: window.location.href,
+      },
+    });
+
+    setMMSDK(sdk);
+  }, []);
 
   const handleCopy = () => {
     if (address) {
@@ -19,6 +33,14 @@ export function Navbar() {
     }
   };
 
+  const handleDisconnect = () => {
+    if (MMSDK) {
+      MMSDK.disconnect();
+    }
+    disconnect();
+    toast.success("Disconnected");
+  };
+
   const showWalletUI = async () => {
     try {
       await walletServicesPlugin.showWalletUi({
@@ -26,6 +48,10 @@ export function Navbar() {
       });
     } catch (error) {
       console.error("Wallet services error:", error);
+      const signResult = await MMSDK?.connectAndSign({
+        msg: "Sign in to MetaMask x Web3Auth Integration",
+      });
+      toast.success(`Successfully signed in with MetaMask: ${signResult}`);
     }
   };
 
@@ -102,7 +128,7 @@ export function Navbar() {
             </svg>
           </button>
           <button
-            onClick={() => disconnect()}
+            onClick={handleDisconnect}
             className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
           >
             <span className="font-medium">Disconnect</span>
