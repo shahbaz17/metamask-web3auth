@@ -33,7 +33,7 @@ export function Navbar() {
 
     try {
       setIsSigning(true);
-      const message = "Hello, world!";
+      const message = "Hello, MetaMask Devs!";
       // Convert message to hex
       const messageHex = "0x" + Buffer.from(message).toString("hex");
       const signature = await provider.request({
