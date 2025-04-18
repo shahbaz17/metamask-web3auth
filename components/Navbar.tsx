@@ -12,10 +12,10 @@ import {
 } from "@web3auth/modal/react";
 
 export function Navbar() {
-  const { provider, isConnected } = useWeb3Auth();
+  const { provider, isConnected, isInitialized } = useWeb3Auth();
   const { loading: connecting, connect, connectorName } = useWeb3AuthConnect();
   const { disconnect } = useWeb3AuthDisconnect();
-  const { showWalletUI } = useWalletUI();
+  const { showWalletUI, loading: walletLoading } = useWalletUI();
   const { address } = useAccount();
   const [isCopied, setIsCopied] = useState(false);
   const [isSigning, setIsSigning] = useState(false);
@@ -41,6 +41,7 @@ export function Navbar() {
         params: [messageHex, address],
       });
       console.log("Signature:", signature);
+      alert(`Signature: ${signature}`);
     } catch (error) {
       console.error("Error signing message:", error);
     } finally {
@@ -58,11 +59,11 @@ export function Navbar() {
       />
 
       <div className="flex items-center gap-3">
-        {!isConnected ? (
+        {!isConnected && isInitialized ? (
           <button
             onClick={() => connect()}
             disabled={connecting}
-            className="bg-white text-black px-4 py-2 font-semibold font-sans rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-white text-black px-4 py-2 font-semibold font-sans rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
           >
             {connecting ? "Connecting..." : "Connect or Sign in"}
           </button>
@@ -98,7 +99,7 @@ export function Navbar() {
                 </div>
               )}
             </div>
-            {connectorName === "metamask" ? (
+            {connectorName === "metamask" || connectorName === null ? (
               <button
                 onClick={signMessage}
                 disabled={isSigning}
@@ -128,7 +129,8 @@ export function Navbar() {
             ) : (
               <button
                 onClick={() => showWalletUI()}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+                disabled={walletLoading}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="font-medium">Wallet</span>
                 <svg

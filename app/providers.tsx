@@ -6,8 +6,8 @@ import { type ReactNode, useState } from "react";
 import { Web3AuthProvider } from "@web3auth/modal/react";
 import { WagmiProvider } from "@web3auth/modal/react/wagmi";
 import {
-  // WALLET_CONNECTORS,
-  // AUTH_CONNECTION,
+  WALLET_CONNECTORS,
+  AUTH_CONNECTION,
   WEB3AUTH_NETWORK,
 } from "@web3auth/modal";
 // import { MetaMaskSDK } from "@metamask/sdk";
@@ -42,34 +42,26 @@ export function Providers({ children }: Props) {
           clientId: process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID!, // Replace with your Client ID
           web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
           authBuildEnv: "testing", // Optional: Only for alpha/testing
-          // modalConfig: {
-          //   connectors: {
-          //     [WALLET_CONNECTORS.AUTH]: {
-          //       label: "auth",
-          //       loginMethods: {
-          //         sms_passwordless: {
-          //           name: "SMS Passwordless",
-          //           authConnection: AUTH_CONNECTION.SMS_PASSWORDLESS,
-          //           authConnectionId: "sms-demo-quickstart",
-          //         },
-          //         email_passwordless: {
-          //           name: "Email Passwordless",
-          //           authConnection: AUTH_CONNECTION.EMAIL_PASSWORDLESS,
-          //           authConnectionId: "email-demo-quickstart",
-          //         },
-          //       },
-          //     },
-          //     [WALLET_CONNECTORS.METAMASK]: {
-          //       label: "metamask",
-          //     },
-          //     [WALLET_CONNECTORS.COINBASE]: {
-          //       label: "coinbase",
-          //     },
-          //     [WALLET_CONNECTORS.WALLET_CONNECT_V2]: {
-          //       label: "wallet-connect-v2",
-          //     },
-          //   },
-          // },
+          modalConfig: {
+            // @ts-expect-error - TODO: fix this in next release
+            connectors: {
+              [WALLET_CONNECTORS.AUTH]: {
+                label: "auth",
+                loginMethods: {
+                  sms_passwordless: {
+                    name: "SMS Passwordless",
+                    authConnection: AUTH_CONNECTION.SMS_PASSWORDLESS,
+                    authConnectionId: "sms-demo-quickstart",
+                  },
+                  email_passwordless: {
+                    name: "Email Passwordless",
+                    authConnection: AUTH_CONNECTION.EMAIL_PASSWORDLESS,
+                    authConnectionId: "ep-demo-quickstart",
+                  },
+                },
+              },
+            },
+          },
         },
       }}
     >
