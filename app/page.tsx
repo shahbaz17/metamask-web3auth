@@ -5,9 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { useRef, useEffect } from "react";
+import { useWeb3Auth, useWeb3AuthDisconnect } from "@web3auth/modal/react";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { disconnect } = useWeb3AuthDisconnect();
+  const { isConnected } = useWeb3Auth();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -73,6 +76,30 @@ export default function Home() {
       />
       <div className="flex flex-col gap-8 items-center sm:items-start w-full px-3 md:px-0">
         <Hero />
+
+        {isConnected && (
+          <button
+            onClick={() => disconnect()}
+            className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+          >
+            <span className="font-medium">Disconnect</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+        )}
 
         <Separator className="w-full my-14 opacity-15" />
 

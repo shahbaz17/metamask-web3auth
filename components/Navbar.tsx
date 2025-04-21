@@ -63,13 +63,13 @@ export function Navbar() {
           <button
             onClick={() => connect()}
             disabled={connecting}
-            className="bg-white text-black px-4 py-2 font-semibold font-sans rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
+            className="bg-white text-black px-3 py-1.5 font-light text-sm font-sans rounded-md cursor-pointer hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white"
           >
             {connecting ? "Connecting..." : "Connect or Sign in"}
           </button>
         ) : (
           <>
-            <div className="relative group">
+            <div className="relative group hidden md:block">
               <button
                 onClick={handleCopy}
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
@@ -103,7 +103,7 @@ export function Navbar() {
               <button
                 onClick={signMessage}
                 disabled={isSigning}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="font-medium">
                   {isSigning ? "Signing..." : "Sign Message"}
@@ -130,7 +130,7 @@ export function Navbar() {
               <button
                 onClick={() => showWalletUI()}
                 disabled={walletLoading}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="font-medium">Wallet</span>
                 <svg
@@ -151,7 +151,7 @@ export function Navbar() {
             )}
             <button
               onClick={() => disconnect()}
-              className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+              className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer hidden md:block"
             >
               <span className="font-medium">Disconnect</span>
               <svg
