@@ -80,7 +80,7 @@ export default function Home() {
         {isConnected && (
           <button
             onClick={() => disconnect()}
-            className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+            className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer md:hidden"
           >
             <span className="font-medium">Disconnect</span>
             <svg

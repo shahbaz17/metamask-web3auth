@@ -72,7 +72,7 @@ export function Navbar() {
             <div className="relative group hidden md:block">
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
               >
                 <span className="text-white font-medium">
                   {address?.slice(0, 6)}...{address?.slice(-4)}
@@ -151,7 +151,7 @@ export function Navbar() {
             )}
             <button
               onClick={() => disconnect()}
-              className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer hidden md:block"
+              className="flex items-center gap-2 bg-red-500/10 hover:bg-red-500/20 text-red-500 text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer hidden md:flex"
             >
               <span className="font-medium">Disconnect</span>
               <svg
