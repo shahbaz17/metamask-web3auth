@@ -44,7 +44,6 @@ export function Providers({ children }: Props) {
           web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
           authBuildEnv: "testing", // Optional: Only for alpha/testing
           modalConfig: {
-            // @ts-expect-error - TODO: fix this in next release
             connectors: {
               [WALLET_CONNECTORS.AUTH]: {
                 label: "auth",
