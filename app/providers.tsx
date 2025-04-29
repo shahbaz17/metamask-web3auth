@@ -10,8 +10,8 @@ import {
   AUTH_CONNECTION,
   WEB3AUTH_NETWORK,
 } from "@web3auth/modal";
-import { MetaMaskSDK } from "@metamask/sdk";
-import { IEthereum } from "./types/ethereum";
+// import { MetaMaskSDK } from "@metamask/sdk";
+// import { IEthereum } from "./types/ethereum";
 
 type Props = {
   children: ReactNode;
@@ -20,21 +20,21 @@ type Props = {
 export function Providers({ children }: Props) {
   const [queryClient] = useState(() => new QueryClient());
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
+  // useEffect(() => {
+  //   if (typeof window === "undefined") return;
 
-    const MMSDK = new MetaMaskSDK({
-      dappMetadata: {
-        name: "MetaMask Web3Auth Integration",
-        url: window.location.href,
-      },
-    });
+  //   const MMSDK = new MetaMaskSDK({
+  //     dappMetadata: {
+  //       name: "MetaMask Web3Auth Integration",
+  //       url: window.location.href,
+  //     },
+  //   });
 
-    const ethereum = MMSDK.getProvider();
-    if (ethereum) {
-      window.ethereum = ethereum as unknown as IEthereum;
-    }
-  }, []);
+  //   const ethereum = MMSDK.getProvider();
+  //   if (ethereum) {
+  //     window.ethereum = ethereum as unknown as IEthereum;
+  //   }
+  // }, []);
 
   return (
     <Web3AuthProvider
