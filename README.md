@@ -14,107 +14,44 @@ This project demonstrates the integration of [MetaMask SDK](https://docs.metamas
 - _Tailwind CSS_ - Beautiful UI components with Tailwind CSS.
 - _Wagmi_ - Ethereum interaction library.
 
-## Set up using a template
+## Project Structure
 
-1. Download the template from the [SDK examples repository](https://github.com/metamask/metamask-sdk-examples):
-   ```bash
-   git clone https://github.com/metamask/metamask-sdk-examples.git
-   ```
-2. Navigate into the quickstart example:
-   ```bash
-   cd metamask-sdk-examples/examples/metamask-web3auth
-   ```
-3. Install dependencies:
+```bash
+├── app/
+│   ├── providers.tsx      # Main providers configuration
+│   └── layout.tsx         # Root layout with providers
+│   └── page.tsx           # Main page with wallet connection
+├── components/
+│   ├── Navbar.tsx         # Navigation component with wallet connection
+│   └── Hero.tsx           # Hero section with wallet status
+├── next.config.ts         # Next.js configuration
+└── package.json           # Project dependencies
+```
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies
+
    ```bash
    pnpm install
    ```
-4. Create a `.env.local` file with your environment variables:
-   ```
+
+3. Create a `.env.local` file with your environment variables:
+
+   ```bash
    NEXT_PUBLIC_WEB3AUTH_CLIENT_ID=your_web3auth_client_id
    ```
-5. Start the development server:
+
+4. Start the development server
 
    ```bash
    pnpm dev
    ```
 
-   You've successfully set up MetaMask SDK with Web3Auth SDK.
+## Environment Variables
 
-## Set up manually
-
-### 1. Install dependencies
-
-Install the SDK and the required dependencies to an existing project:
-
-```bash
-npm install viem wagmi @tanstack/react-query @web3auth/modal@10.0.0-beta.6
-```
-
-### 2. Configure providers
-
-Set up your providers in `app/providers.tsx`:
-
-```tsx
-"use client";
-
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { type ReactNode, useState, useEffect } from "react";
-
-import { Web3AuthProvider } from "@web3auth/modal/react";
-import { WagmiProvider } from "@web3auth/modal/react/wagmi";
-
-import { MetaMaskSDK } from "@metamask/sdk";
-
-type Props = {
-  children: ReactNode;
-};
-
-export function Providers({ children }: Props) {
-  const [queryClient] = useState(() => new QueryClient());
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const MMSDK = new MetaMaskSDK({
-      dappMetadata: {
-        name: "MetaMask Web3Auth Integration",
-        url: window.location.href,
-      },
-    });
-
-    const ethereum = MMSDK.getProvider();
-    if (ethereum) {
-      window.ethereum = ethereum as unknown as IEthereum;
-    }
-  }, []);
-
-  return (
-    <Web3AuthProvider
-      config={{
-        web3AuthOptions: {
-          clientId: process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID!, // Replace with your Client ID
-          web3AuthNetwork: "sapphire_devnet",
-          authBuildEnv: "testing", // Optional: Only for alpha/testing
-        },
-      }}
-    >
-      <QueryClientProvider client={queryClient}>
-        <WagmiProvider>
-          <div className="container">{children}</div>
-        </WagmiProvider>
-      </QueryClientProvider>
-    </Web3AuthProvider>
-  );
-}
-```
-
-### 3. Set up environment variables
-
-Create a `.env.local` file with your environment variables:
-
-```bash
-NEXT_PUBLIC_WEB3AUTH_CLIENT_ID=your_web3auth_client_id
-```
+- `NEXT_PUBLIC_WEB3AUTH_CLIENT_ID` - Your Web3Auth client ID.
 
 ## Usage
 
@@ -183,3 +120,60 @@ export const SendTransaction = () => {
   );
 };
 ```
+
+## Dependencies
+
+- `@web3auth/modal`: Web3Auth SDK
+- `@metamask/sdk`: MetaMask SDK
+- `wagmi`: Ethereum interaction library
+- `@tanstack/react-query`: Data fetching and state management
+- `next`: React framework
+- `react`: React library
+- `react-dom`: React DOM
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
