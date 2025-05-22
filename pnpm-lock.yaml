@@ -18,8 +18,8 @@ importers:
         specifier: ^5.74.3
         version: 5.74.4(react@19.1.0)
       '@web3auth/modal':
-        specifier: 10.0.0-beta.8
-        version: 10.0.0-beta.8(@babel/runtime@7.27.0)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@tanstack/react-query@5.74.4(react@19.1.0))(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))
+        specifier: 10.0.0-beta.12
+        version: 10.0.0-beta.12(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -93,6 +93,10 @@ packages:
 
   '@babel/runtime@7.27.0':
     resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.27.1':
+    resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
     engines: {node: '>=6.9.0'}
 
   '@chaitanyapotti/register-service-worker@1.7.4':
@@ -331,24 +335,23 @@ packages:
   '@lit/reactive-element@1.6.3':
     resolution: {integrity: sha512-QuTgnG52Poic7uM1AN5yJ09QMe0O28e10XzSvWDz02TJiiKee4stsiownEIadWm8nYzyDAyT+gKzUoZmiWQtsQ==}
 
-  '@metamask/auto-changelog@3.4.4':
-    resolution: {integrity: sha512-bA2U6JXIQpbTbiURZ4X+c0OmkzQUOAggmG7x+NL37ELL8zI5NuiRyuR1dvlmhhlOUOdj8cCuqYFOxR478kz4Lg==}
-    engines: {node: '>=14.0.0'}
-    hasBin: true
+  '@metamask/delegation-abis@0.11.0':
+    resolution: {integrity: sha512-tnNGFDLQ5jfgPhHJaT5JwvF759nja1iGAG00REbk1Ufir+TxjxTmF8L9MbJifZmUh4fnyqV4Ik6NAOYVNBPVBg==}
+    engines: {node: ^18.18 || >=20}
 
-  '@metamask/delegation-abis@0.9.0':
-    resolution: {integrity: sha512-Ay+qTXpjZLwRdGUQKRdpxGlQ90vq0SPjFTUJ3fJi/SIZE7+2R/84fkI5hPaOrdgugZhkw9Z93aSaoTVbWM3h0Q==}
+  '@metamask/delegation-deployments@0.11.0':
+    resolution: {integrity: sha512-RfeMr1Ct0givG7oOy1unwdb5lGttq9pape4OGz2mk8quG0KDqDi7cw3fzYc7wz9xFDZ2YrFanYRacaLTlqWS8g==}
+    engines: {node: ^18.18 || >=20}
 
-  '@metamask/delegation-deployments@0.9.0':
-    resolution: {integrity: sha512-8+xn4MqXKyDwdkH0+tXDesDHnpQ8gZPqN6leAWdKgWrWcAOLwu9py7vso8FHKT8pq3F+xD+BCkXrJsAEHvwVMw==}
-
-  '@metamask/delegation-toolkit@0.10.2':
-    resolution: {integrity: sha512-i+TY34Fbjz61OZqO5GtMrXfYb5aX0cu54wlBr/uDFmCEZz4giBMdM0kItySs7Z1R6Rg0ZargK94Z1F7aMofa8A==}
+  '@metamask/delegation-toolkit@0.11.0':
+    resolution: {integrity: sha512-KQybftUahuPPjN842ejmVaJWg2rzHpSpvd+b6qtiOBypzJs7cgw1/f8QalHLugS1eyicEYLXwvRxjjufiG4wbg==}
+    engines: {node: ^18.18 || >=20}
     peerDependencies:
       viem: '>=2.18.2 <3.0.0'
 
-  '@metamask/delegation-utils@0.10.0':
-    resolution: {integrity: sha512-Bj8GrYwMWbJ2/kOYksEg4cINk5MwEOgyD3T/B/2JM4dv09m8Q/GPdLSN8pkZbfHkoV/ig5BF+fucudBmsiS5LQ==}
+  '@metamask/delegation-utils@0.11.0':
+    resolution: {integrity: sha512-eg8icyDtbzwER/G3VvaiVUNiNr9GXxJXQMcFRbhm9tTMqWXpphYXk9edSungRF+QqYmXIytRiR2ChSHp0uNtew==}
+    engines: {node: ^18.18 || >=20}
     peerDependencies:
       viem: '>=2.18.2 <3.0.0'
 
@@ -802,8 +805,8 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
-  '@toruslabs/base-controllers@8.4.3':
-    resolution: {integrity: sha512-swF/yY0AObCiwoVdQRyMrbKztcIA4SgyvIXGIDBqaktRXcFQQaDlYpNtOmp5wu0yTWbGaWhT9vcqZusoPuRrIw==}
+  '@toruslabs/base-controllers@8.4.6':
+    resolution: {integrity: sha512-J3eLhRGrQRMkqD0PJlfEWbAYKfMQPD6ECzEMbtfKRQb9sd+Mbely2/0jZGUsy/lrEh6QF4PT6Z6bU5g9zSnaCQ==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': 7.x
@@ -840,19 +843,16 @@ packages:
       '@sentry/core':
         optional: true
 
-  '@toruslabs/eccrypto@6.0.2':
-    resolution: {integrity: sha512-C2MOqtg3UrmAqRSUiOFXzGRaKkQzTN2fIHxxSnaj86no//ziVDPIJLTiPPAqyny/QMPZbCODQAofwPXF0G0juA==}
-    engines: {node: '>=20.x', npm: '>=9.x'}
-
   '@toruslabs/eccrypto@6.1.0':
     resolution: {integrity: sha512-9eC8UJ+XsztgJTcFbhiXIDl9bFXCY1TOKMCnfH2T+RVtpLOKQ0OWCRlFKqeMZ3ffz3gbrUwXZaE5BJ/MW4Hnkw==}
     engines: {node: '>=20.x', npm: '>=9.x'}
 
-  '@toruslabs/ethereum-controllers@8.4.3':
-    resolution: {integrity: sha512-lkMpMTgc2MoIEdzAN7pwRZCzqE4YVMoqMJUdNJUo6LtFpEV7dl395FeI+wMWvhzl7oaDeMWPhCx2ZRg+4khyLg==}
+  '@toruslabs/ethereum-controllers@8.4.7':
+    resolution: {integrity: sha512-A8rJIQGMc56SdxFBiF34FZ+iWtsS4uqVFOHC1h56NoCE5aNSMr0DylQys6185jH9H01ibewaSAY3BM7R7qJFQg==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': 7.x
+      viem: '>=2.23'
 
   '@toruslabs/fetch-node-details@15.0.0':
     resolution: {integrity: sha512-uYTV+mv5U6egTQj94zSyy9NqlfUYdwen6GeyDdCA7g0TN+YnRV4WgkcjloN0llscrND7mzuJNSIVDHCE+kSpcQ==}
@@ -1138,8 +1138,8 @@ packages:
     resolution: {integrity: sha512-iu0mgLj51AXcKpdNj8+4EdNNBd/mkNjLEhZn6UMc/r7BM9WbmpPMEydA39WeRLbdLO4kbpmq4wTbiskI1rg+HA==}
     engines: {node: '>=18'}
 
-  '@walletconnect/core@2.20.0':
-    resolution: {integrity: sha512-MpCx9WthaAJ9pA2oHC84oTFUtntjj9mCmevwBDPVsQ2Q/pYeh2+THDPaaw6fzTbNTXyGCvJXRyLQkN9xO+Vmzw==}
+  '@walletconnect/core@2.20.3':
+    resolution: {integrity: sha512-2xMopmR6Inx4d4PIwChnfQxdpb828WAwXWj+DodcDpt1aqusknVfkoDtx/PL1+KyqEbyiUdlW09krjnRvT82KQ==}
     engines: {node: '>=18'}
 
   '@walletconnect/environment@1.0.1':
@@ -1201,8 +1201,8 @@ packages:
   '@walletconnect/sign-client@2.19.2':
     resolution: {integrity: sha512-a/K5PRIFPCjfHq5xx3WYKHAAF8Ft2I1LtxloyibqiQOoUtNLfKgFB1r8sdMvXM7/PADNPe4iAw4uSE6PrARrfg==}
 
-  '@walletconnect/sign-client@2.20.0':
-    resolution: {integrity: sha512-5Ao9RVGsgpMTLjVByFfjMbX7RwJM0HvKV7P9ONJwPPo4OiviNyneeOufr2KKZhuwF+QUu5mTE0Lj/euGWSNaOQ==}
+  '@walletconnect/sign-client@2.20.3':
+    resolution: {integrity: sha512-78nW9UCRRvXgcp0M8lpbRBuu301LZb+jAGeFYIhVat0JGOzxHPVl+Wu+ruVrA6e4a8JYns7V1443r3qEc3Pj2Q==}
 
   '@walletconnect/time@1.0.2':
     resolution: {integrity: sha512-uzdd9woDcJ1AaBZRhqy5rNC9laqWGErfc4dxA9a87mPdKOgWMD85mcFo9dIYIts/Jwocfwn07EC6EzclKubk/g==}
@@ -1210,8 +1210,8 @@ packages:
   '@walletconnect/types@2.19.2':
     resolution: {integrity: sha512-/LZWhkVCUN+fcTgQUxArxhn2R8DF+LSd/6Wh9FnpjeK/Sdupx1EPS8okWG6WPAqq2f404PRoNAfQytQ82Xdl3g==}
 
-  '@walletconnect/types@2.20.0':
-    resolution: {integrity: sha512-oFGHRL/yQbZqBiTA8yvV+PGJYBU/laDAQWFiJZ9Xlv+qN5EzHipW39Ru6qyp8P4DGnbQI6bHPs9bizJ7hkDRKA==}
+  '@walletconnect/types@2.20.3':
+    resolution: {integrity: sha512-Onco0uRzXnyK8zcwygjrip2CuWqJ7NhuRDPqoNQEjKma9CNdWxOhHu6a+iV+4nJ/gQrpZYSaEfJLVw+UdUPxKA==}
 
   '@walletconnect/universal-provider@2.19.2':
     resolution: {integrity: sha512-LkKg+EjcSUpPUhhvRANgkjPL38wJPIWumAYD8OK/g4OFuJ4W3lS/XTCKthABQfFqmiNbNbVllmywiyE44KdpQg==}
@@ -1219,8 +1219,8 @@ packages:
   '@walletconnect/utils@2.19.2':
     resolution: {integrity: sha512-VU5CcUF4sZDg8a2/ov29OJzT3KfLuZqJUM0GemW30dlipI5fkpb0VPenZK7TcdLPXc1LN+Q+7eyTqHRoAu/BIA==}
 
-  '@walletconnect/utils@2.20.0':
-    resolution: {integrity: sha512-PlglakJ/zhBRUg7yfulfedWgPC0ZoVEYCiniFkCeWfTq03ufvkB3tgBJQkNoHUV7ZgPYxAdSbO3KsKceZzjufw==}
+  '@walletconnect/utils@2.20.3':
+    resolution: {integrity: sha512-16/5UpR60lKWsyIMP9XeYup3XCOIxgPDOqxCRhm9iAT2XMFGqzBi8CL8U8AEreJelNZ0map4McgLKNaGZCU1NA==}
 
   '@walletconnect/window-getters@1.0.1':
     resolution: {integrity: sha512-vHp+HqzGxORPAN8gY03qnbTMnhqIwjeRJNOMOAzePRg4xVEEE2WvYsI9G2NMjOknA8hnuYbU3/hwLcKbjhc8+Q==}
@@ -1228,74 +1228,52 @@ packages:
   '@walletconnect/window-metadata@1.0.1':
     resolution: {integrity: sha512-9koTqyGrM2cqFRW517BPY/iEtUDx2r1+Pwwu5m7sJ7ka79wi3EyqhqcICk/yDmv6jAS1rjKgTKXlEhanYjijcA==}
 
-  '@web3auth/auth@10.4.0':
-    resolution: {integrity: sha512-Wap2uOwINVSniRsdjl0ed+GNOA1sWlbIJlYjo9fV0woJ7e+O792y9rdbWO71WfNvzJSQRo+6I+ziQaZt/PsoFw==}
+  '@web3auth/auth@10.4.1':
+    resolution: {integrity: sha512-zpQ1Wc8BJkdaRbgXmtej8x3lz/VggYly+zoE5se/uvqawDfswoPxMfqKTOdfCm8d/ikz0FJsqCSYTUXcpA5G6A==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': 7.x
 
-  '@web3auth/modal@10.0.0-beta.8':
-    resolution: {integrity: sha512-5C1am26eoXkv9T4ktPt8Oylc6N59C98dz4Zk72Kk5p12y/KuyJMJQ5WZnkQZA146JKRrlNAtI2Fm9LaZRR1yGg==}
+  '@web3auth/modal@10.0.0-beta.12':
+    resolution: {integrity: sha512-VGAAAciVe3lqvwqqNCndd2mgfApS0UUkuLJUbOFvCJ4MBmW3baa7EC3mOx9/MrfoV4eyYi2KrF1o7R0iv8fR0w==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': ^7.x
       '@coinbase/wallet-sdk': ^4.3.x
       '@solana/web3.js': '>=1.98'
-      '@tanstack/react-query': '*'
-      '@wagmi/core': '>=2.16'
-      '@wagmi/vue': '>=0.1'
       react: '>=18'
       react-dom: '>=18'
       viem: '>=2.23'
-      vue: ^3.x
-      wagmi: '>=2.14'
+      vue: '>=3.x'
     peerDependenciesMeta:
       '@coinbase/wallet-sdk':
-        optional: true
-      '@tanstack/react-query':
-        optional: true
-      '@wagmi/core':
-        optional: true
-      '@wagmi/vue':
         optional: true
       viem:
         optional: true
       vue:
         optional: true
-      wagmi:
-        optional: true
 
-  '@web3auth/no-modal@10.0.0-beta.8':
-    resolution: {integrity: sha512-5lkQEpzteV67DrlXi078LQKHUHDEiSb5exy4LoqXKd4F+ioA06S2USe1goqGAjkxH/H6ww0EkVYT53kaCeI2sg==}
+  '@web3auth/no-modal@10.0.0-beta.12':
+    resolution: {integrity: sha512-J7R0yrig3ox1bH4up64pKtbDW84cYJ65guTcUBzx5M28OeC7le9+Uo9p1/IL1hKQEQuu8cgZBNgWiXX2ZLNz3g==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': ^7.x
       '@coinbase/wallet-sdk': ^4.3.x
-      '@tanstack/react-query': '*'
-      '@wagmi/core': '>=2.14'
-      '@wagmi/vue': '>=0.1'
       react: '>=18'
-      viem: '>=2.23'
+      viem: '>=2.29'
       vue: ^3.x
-      wagmi: '>=2.14'
     peerDependenciesMeta:
       '@coinbase/wallet-sdk':
         optional: true
-      '@tanstack/react-query':
-        optional: true
-      '@wagmi/core':
-        optional: true
-      '@wagmi/vue':
-        optional: true
       react:
+        optional: true
+      viem:
         optional: true
       vue:
         optional: true
-      wagmi:
-        optional: true
 
-  '@web3auth/ws-embed@5.0.5':
-    resolution: {integrity: sha512-/Fka57R8taX+JGZRRVUeHrm7LgHI/I9VIt53c0Q7m6/g6dd/xfJyyfaX1IG7+bAzoS6xnEllbG8/A6VVf1fcbw==}
+  '@web3auth/ws-embed@5.0.8':
+    resolution: {integrity: sha512-XHBdLQJhYDieWKVftwptDSviJaP97sLE3NEdHAqnTjl6KiozX1BfiFrckRN7QF3mpTihqxhh2Fs7qpPJX+r6XQ==}
     engines: {node: '>=20.x', npm: '>=9.x'}
     peerDependencies:
       '@babel/runtime': 7.x
@@ -1450,8 +1428,8 @@ packages:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
     engines: {node: '>=0.6'}
 
-  bignumber.js@9.2.1:
-    resolution: {integrity: sha512-+NzaKgOUvInq9TIUZ1+DRspzf/HApkCwD4btfuasFTdrfnOxqx853TgDpMolp+uv4RpRp7bPcEU2zKr9+fRmyw==}
+  bignumber.js@9.3.0:
+    resolution: {integrity: sha512-EM7aMFTXbptt/wZdMlBv2t8IViwQL+h6SLHosp8Yf0dqJMTnY6iL32opnAB6kAdL0SZPuvcAzFr31o0c/R3/RA==}
 
   bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
@@ -1465,9 +1443,6 @@ packages:
 
   bn.js@4.12.1:
     resolution: {integrity: sha512-k8TVBiPkPJT9uHLdOKfFpqcfprwBFOAAXXozRubr7R7PfIuKvQlzcI4M0pALeqXN09vdaMbUdUj+pass+uULAg==}
-
-  bn.js@5.2.1:
-    resolution: {integrity: sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==}
 
   bn.js@5.2.2:
     resolution: {integrity: sha512-v2YAxEmKaBLahNwE1mjp4WON6huMNeuDvagFZW+ASCuA/ku0bXR9hSMw0XpiqMoA3+rmnyck/tPRSFQkoC9Cuw==}
@@ -1561,10 +1536,6 @@ packages:
 
   cliui@6.0.0:
     resolution: {integrity: sha512-t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==}
-
-  cliui@8.0.1:
-    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
-    engines: {node: '>=12'}
 
   clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
@@ -1738,10 +1709,6 @@ packages:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
 
-  diff@5.2.0:
-    resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
-    engines: {node: '>=0.3.1'}
-
   dijkstrajs@1.0.3:
     resolution: {integrity: sha512-qiSlmBq9+BCdCA/L46dw8Uy93mloxsPSbwnm5yrKn2vMPiy8KyAskTF6zuV/j5BMsmOGZDPs7KjU+mjb670kfA==}
 
@@ -1829,10 +1796,6 @@ packages:
 
   es6-promisify@5.0.0:
     resolution: {integrity: sha512-C+d6UdsYDk0lMebHNR4S2NybQMMngAOnOwYBQjTOiv0MkoJMP0Myw2mgpDLBcpfCmRLxyFqYhS/CfOENq4SJhQ==}
-
-  escalade@3.2.0:
-    resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
-    engines: {node: '>=6'}
 
   escape-string-regexp@4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
@@ -1975,8 +1938,8 @@ packages:
     resolution: {integrity: sha512-ZqHd92eOIH9RExpBUOgzpAgflyFv9/+Ca39G8V+oCjJPGjJUihQcG/Gl67I/Xn2HGS87dgnrCG3kb1jNClLi6g==}
     engines: {node: ^14.21.3 || >=16, npm: '>=9'}
 
-  ethers@6.13.7:
-    resolution: {integrity: sha512-qbaJ0uIrjh+huP1Lad2f2QtzW5dcqSVjIzVH6yWB4dKoMuj2WqYz5aMeeQTCNpAKgTJBM5J9vcc2cYJ23UAimQ==}
+  ethers@6.14.1:
+    resolution: {integrity: sha512-JnFiPFi3sK2Z6y7jZ3qrafDMwiXmU+6cNZ0M+kPq+mTy9skqEzwqAdFW3nb/em2xjlIVXX6Lz8ID6i3LmS4+fQ==}
     engines: {node: '>=14.0.0'}
 
   event-target-shim@5.0.1:
@@ -1992,10 +1955,6 @@ packages:
   events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
-
-  execa@5.1.1:
-    resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
-    engines: {node: '>=10'}
 
   extension-port-stream@3.0.0:
     resolution: {integrity: sha512-an2S5quJMiy5bnZKEf6AkfH/7r8CzHvhchU40gxN+OM6HPhe7Z9T1FUychcf2M9PpPOO0Hf7BAEfJkw2TDIBDw==}
@@ -2102,10 +2061,6 @@ packages:
     resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
     engines: {node: '>= 0.4'}
 
-  get-stream@6.0.1:
-    resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
-    engines: {node: '>=10'}
-
   get-symbol-description@1.1.0:
     resolution: {integrity: sha512-w9UMqWwJxHNOvoNzSJ2oPF5wvYcvP7jUvYzhp67yEhTi17ZDBBC1z9pTdGuzjD+EFIqLSYRweZjqfiPzQ06Ebg==}
     engines: {node: '>= 0.4'}
@@ -2189,15 +2144,11 @@ packages:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
 
-  human-signals@2.1.0:
-    resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
-    engines: {node: '>=10.17.0'}
-
   humanize-ms@1.2.1:
     resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
 
-  i18next@25.0.2:
-    resolution: {integrity: sha512-xWxgK8GAaPYkV9ia2tdgbtdM+qiC+ysVTBPvXhpCORU/+QkeQe3BSI7Crr+c4ZXULN1PfnXG/HY2n7HGx4KKBg==}
+  i18next@25.2.0:
+    resolution: {integrity: sha512-ERhJICsxkw1vE7G0lhCUYv4ZxdBEs03qblt1myJs94rYRK9loJF3xDj8mgQz3LmCyp0yYrNjbN/1/GWZTZDGCA==}
     peerDependencies:
       typescript: ^5
     peerDependenciesMeta:
@@ -2572,9 +2523,6 @@ packages:
   md5.js@1.3.5:
     resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
 
-  merge-stream@2.0.0:
-    resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
-
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -2585,10 +2533,6 @@ packages:
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
-
-  mimic-fn@2.1.0:
-    resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
-    engines: {node: '>=6'}
 
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
@@ -2681,10 +2625,6 @@ packages:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
 
-  npm-run-path@4.0.1:
-    resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
-    engines: {node: '>=8'}
-
   obj-multiplex@1.0.0:
     resolution: {integrity: sha512-0GNJAOsHoBHeNTvl5Vt6IWnpUEcc3uSRxzBri7EDyIcMgYvnY2JL2qdeV5zTMjWQX5OHcD5amcW2HFfDh0gjIA==}
 
@@ -2736,10 +2676,6 @@ packages:
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
-
-  onetime@5.1.2:
-    resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
-    engines: {node: '>=6'}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -2800,11 +2736,11 @@ packages:
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
 
-  permissionless@0.2.43:
-    resolution: {integrity: sha512-ZZHNLTutdRXmDmBc9/NEd7mAdQZzxJeF0FJK/8jqW8c8KW/KhqwHw5/ESvhUjZKq2Q1Gk010hS2UvTceVaL6Bg==}
+  permissionless@0.2.47:
+    resolution: {integrity: sha512-/Y+2SK+OGrPJuVZ9RcDDBL+U3wGnw3PByc610zvk2G1h//rRez3YZ9CyuMiOf7MpTh53XxmQeKsqKPna0Ilciw==}
     peerDependencies:
       ox: 0.6.7
-      viem: ^2.23.2
+      viem: ^2.28.1
     peerDependenciesMeta:
       ox:
         optional: true
@@ -2864,11 +2800,6 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-
-  prettier@2.8.8:
-    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
 
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -3118,9 +3049,6 @@ packages:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
 
-  signal-exit@3.0.7:
-    resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
-
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
@@ -3202,10 +3130,6 @@ packages:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
-  strip-final-newline@2.0.0:
-    resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
-    engines: {node: '>=6'}
-
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
@@ -3241,6 +3165,9 @@ packages:
 
   tailwind-merge@3.2.0:
     resolution: {integrity: sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA==}
+
+  tailwind-merge@3.3.0:
+    resolution: {integrity: sha512-fyW/pEfcQSiigd5SNn0nApUOxx0zB/dm6UDU/rEwc2c3sX2smWUNbapHv+QRqLGVp9GWX3THIa7MUGPo+YkDzQ==}
 
   tailwindcss@4.1.4:
     resolution: {integrity: sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==}
@@ -3537,10 +3464,6 @@ packages:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
     engines: {node: '>=8'}
 
-  wrap-ansi@7.0.0:
-    resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
-    engines: {node: '>=10'}
-
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
@@ -3610,25 +3533,13 @@ packages:
   y18n@4.0.3:
     resolution: {integrity: sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ==}
 
-  y18n@5.0.8:
-    resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
-    engines: {node: '>=10'}
-
   yargs-parser@18.1.3:
     resolution: {integrity: sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==}
     engines: {node: '>=6'}
 
-  yargs-parser@21.1.1:
-    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
-    engines: {node: '>=12'}
-
   yargs@15.4.1:
     resolution: {integrity: sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==}
     engines: {node: '>=8'}
-
-  yargs@17.7.2:
-    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
-    engines: {node: '>=12'}
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -3664,11 +3575,13 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  '@babel/runtime@7.27.1': {}
+
   '@chaitanyapotti/register-service-worker@1.7.4': {}
 
   '@coinbase/wallet-sdk@3.9.3':
     dependencies:
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       buffer: 6.0.3
       clsx: 1.2.1
       eth-block-tracker: 7.1.0
@@ -3786,7 +3699,7 @@ snapshots:
 
   '@hcaptcha/react-hcaptcha@1.12.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@hcaptcha/loader': 2.0.0
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -3888,32 +3801,20 @@ snapshots:
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.3.0
 
-  '@metamask/auto-changelog@3.4.4':
-    dependencies:
-      diff: 5.2.0
-      execa: 5.1.1
-      prettier: 2.8.8
-      semver: 7.7.1
-      yargs: 17.7.2
+  '@metamask/delegation-abis@0.11.0': {}
 
-  '@metamask/delegation-abis@0.9.0':
-    dependencies:
-      '@metamask/auto-changelog': 3.4.4
+  '@metamask/delegation-deployments@0.11.0': {}
 
-  '@metamask/delegation-deployments@0.9.0':
+  '@metamask/delegation-toolkit@0.11.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@metamask/auto-changelog': 3.4.4
-
-  '@metamask/delegation-toolkit@0.10.2(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
-    dependencies:
-      '@metamask/delegation-utils': 0.10.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@metamask/delegation-utils': 0.11.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       webauthn-p256: 0.0.5
 
-  '@metamask/delegation-utils@0.10.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@metamask/delegation-utils@0.11.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@metamask/delegation-abis': 0.9.0
-      '@metamask/delegation-deployments': 0.9.0
+      '@metamask/delegation-abis': 0.11.0
+      '@metamask/delegation-deployments': 0.11.0
       buffer: 6.0.3
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
 
@@ -4039,7 +3940,7 @@ snapshots:
 
   '@metamask/sdk@0.32.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@metamask/onboarding': 1.0.1
       '@metamask/providers': 16.1.0
       '@metamask/sdk-communication-layer': 0.32.0(cross-fetch@4.1.0)(eciesjs@0.4.14)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10))
@@ -4355,7 +4256,7 @@ snapshots:
 
   '@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@noble/curves': 1.8.2
       '@noble/hashes': 1.7.2
       '@solana/buffer-layout': 4.0.1
@@ -4459,16 +4360,17 @@ snapshots:
       '@tanstack/query-core': 5.74.4
       react: 19.1.0
 
-  '@toruslabs/base-controllers@8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/base-controllers@8.4.6(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
       '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@web3auth/auth': 10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@web3auth/auth': 10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       async-mutex: 0.5.0
-      bignumber.js: 9.2.1
+      bignumber.js: 9.3.0
       bowser: 2.11.0
+      events: 3.3.0
       jwt-decode: 4.0.0
       loglevel: 1.9.2
     transitivePeerDependencies:
@@ -4479,10 +4381,10 @@ snapshots:
 
   '@toruslabs/broadcast-channel@12.0.0(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.0)
-      '@toruslabs/eccrypto': 6.0.2
-      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.1)
+      '@toruslabs/eccrypto': 6.1.0
+      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
       base64url: 3.0.1
       loglevel: 1.9.2
       oblivious-set: 1.4.0
@@ -4494,30 +4396,30 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@toruslabs/bs58@1.0.0(@babel/runtime@7.27.0)':
+  '@toruslabs/bs58@1.0.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
 
-  '@toruslabs/constants@14.2.0(@babel/runtime@7.27.0)':
+  '@toruslabs/constants@14.2.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
 
-  '@toruslabs/constants@15.0.0(@babel/runtime@7.27.0)':
+  '@toruslabs/constants@15.0.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
 
-  '@toruslabs/customauth@21.3.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/customauth@21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@chaitanyapotti/register-service-worker': 1.7.4
       '@toruslabs/broadcast-channel': 12.0.0(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/eccrypto': 6.0.2
-      '@toruslabs/fetch-node-details': 15.0.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/session-manager': 4.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/torus.js': 16.0.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/eccrypto': 6.1.0
+      '@toruslabs/fetch-node-details': 15.0.0(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/session-manager': 4.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/torus.js': 16.0.0(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
       base64url: 3.0.1
       bowser: 2.11.0
       deepmerge: 4.3.1
@@ -4530,91 +4432,85 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@toruslabs/eccrypto@6.0.2':
-    dependencies:
-      elliptic: 6.6.1
-
   '@toruslabs/eccrypto@6.1.0':
     dependencies:
       elliptic: 6.6.1
 
-  '@toruslabs/ethereum-controllers@8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@toruslabs/ethereum-controllers@8.4.7(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
-      '@metamask/delegation-toolkit': 0.10.2(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@toruslabs/base-controllers': 8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@web3auth/auth': 10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@metamask/delegation-toolkit': 0.11.0(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@toruslabs/base-controllers': 8.4.6(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@web3auth/auth': 10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       async-mutex: 0.5.0
-      bignumber.js: 9.2.1
+      bignumber.js: 9.3.0
       bn.js: 5.2.2
       deepmerge: 4.3.1
-      ethers: 6.13.7(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ethers: 6.14.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       fast-json-patch: 3.1.1
       fast-safe-stringify: 2.1.1
       jsonschema: 1.5.0
       loglevel: 1.9.2
-      permissionless: 0.2.43(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      permissionless: 0.2.47(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@sentry/core'
       - bufferutil
       - ox
       - supports-color
-      - typescript
       - utf-8-validate
-      - zod
 
-  '@toruslabs/fetch-node-details@15.0.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)':
+  '@toruslabs/fetch-node-details@15.0.0(@babel/runtime@7.27.1)(@sentry/core@9.13.0)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/fnd-base': 15.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/fnd-base': 15.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
       loglevel: 1.9.2
     transitivePeerDependencies:
       - '@sentry/core'
 
   '@toruslabs/ffjavascript@5.0.0': {}
 
-  '@toruslabs/fnd-base@15.0.0(@babel/runtime@7.27.0)':
+  '@toruslabs/fnd-base@15.0.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
 
-  '@toruslabs/http-helpers@8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)':
+  '@toruslabs/http-helpers@8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       deepmerge: 4.3.1
       loglevel: 1.9.2
     optionalDependencies:
       '@sentry/core': 9.13.0
 
-  '@toruslabs/loglevel-sentry@8.1.0(@babel/runtime@7.27.0)':
+  '@toruslabs/loglevel-sentry@8.1.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@sentry/core': 9.13.0
       loglevel: 1.9.2
 
-  '@toruslabs/metadata-helpers@7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)':
+  '@toruslabs/metadata-helpers@7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/eccrypto': 6.0.2
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/eccrypto': 6.1.0
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
       elliptic: 6.6.1
       ethereum-cryptography: 3.1.0
       json-stable-stringify: 1.2.1
     transitivePeerDependencies:
       - '@sentry/core'
 
-  '@toruslabs/secure-pub-sub@3.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@toruslabs/secure-pub-sub@3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.0)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.1)
       '@toruslabs/eccrypto': 6.1.0
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
       loglevel: 1.9.2
       socket.io-client: 4.8.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -4623,37 +4519,37 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@toruslabs/session-manager@4.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)':
+  '@toruslabs/session-manager@4.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)':
     dependencies:
-      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.0)
-      '@toruslabs/eccrypto': 6.0.2
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
+      '@toruslabs/constants': 14.2.0(@babel/runtime@7.27.1)
+      '@toruslabs/eccrypto': 6.1.0
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
     optionalDependencies:
       '@rollup/rollup-linux-x64-gnu': 4.40.0
     transitivePeerDependencies:
       - '@babel/runtime'
       - '@sentry/core'
 
-  '@toruslabs/starkware-crypto@5.0.0(@babel/runtime@7.27.0)':
+  '@toruslabs/starkware-crypto@5.0.0(@babel/runtime@7.27.1)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       assert: 2.1.0
       bip39: 3.1.0
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       elliptic: 6.6.1
       enc-utils: 3.0.0
       ethereum-cryptography: 3.1.0
       hash.js: 1.1.7
 
-  '@toruslabs/torus.js@16.0.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)':
+  '@toruslabs/torus.js@16.0.0(@babel/runtime@7.27.1)(@sentry/core@9.13.0)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/bs58': 1.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/eccrypto': 6.0.2
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      bn.js: 5.2.1
+      '@babel/runtime': 7.27.1
+      '@toruslabs/bs58': 1.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/eccrypto': 6.1.0
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      bn.js: 5.2.2
       elliptic: 6.6.1
       ethereum-cryptography: 3.1.0
       json-stable-stringify: 1.2.1
@@ -4954,7 +4850,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@walletconnect/core@2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@walletconnect/core@2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@walletconnect/heartbeat': 1.2.2
       '@walletconnect/jsonrpc-provider': 1.0.14
@@ -4967,8 +4863,8 @@ snapshots:
       '@walletconnect/relay-auth': 1.1.0
       '@walletconnect/safe-json': 1.0.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.20.0
-      '@walletconnect/utils': 2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@walletconnect/types': 2.20.3
+      '@walletconnect/utils': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@walletconnect/window-getters': 1.0.1
       es-toolkit: 1.33.0
       events: 3.3.0
@@ -5193,16 +5089,16 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@walletconnect/sign-client@2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@walletconnect/sign-client@2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
-      '@walletconnect/core': 2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@walletconnect/core': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.2
       '@walletconnect/jsonrpc-utils': 1.0.8
       '@walletconnect/logger': 2.1.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.20.0
-      '@walletconnect/utils': 2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@walletconnect/types': 2.20.3
+      '@walletconnect/utils': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       events: 3.3.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -5260,7 +5156,7 @@ snapshots:
       - ioredis
       - uploadthing
 
-  '@walletconnect/types@2.20.0':
+  '@walletconnect/types@2.20.3':
     dependencies:
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.2
@@ -5370,7 +5266,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@walletconnect/utils@2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
+  '@walletconnect/utils@2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@noble/ciphers': 1.2.1
       '@noble/curves': 1.8.1
@@ -5381,7 +5277,7 @@ snapshots:
       '@walletconnect/relay-auth': 1.1.0
       '@walletconnect/safe-json': 1.0.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.20.0
+      '@walletconnect/types': 2.20.3
       '@walletconnect/window-getters': 1.0.1
       '@walletconnect/window-metadata': 1.0.1
       bs58: 6.0.0
@@ -5422,21 +5318,21 @@ snapshots:
       '@walletconnect/window-getters': 1.0.1
       tslib: 1.14.1
 
-  '@web3auth/auth@10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@web3auth/auth@10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/customauth': 21.3.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/customauth': 21.3.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@toruslabs/ffjavascript': 5.0.0
-      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/session-manager': 4.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/starkware-crypto': 5.0.0(@babel/runtime@7.27.0)
+      '@toruslabs/metadata-helpers': 7.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/session-manager': 4.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/starkware-crypto': 5.0.0(@babel/runtime@7.27.1)
       '@toruslabs/tweetnacl-js': 1.0.4
       base64url: 3.0.1
       bip39: 3.1.0
-      bn.js: 5.2.1
+      bn.js: 5.2.2
       color: 5.0.0
       deepmerge: 4.3.1
       enc-utils: 3.0.0
@@ -5458,32 +5354,29 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@web3auth/modal@10.0.0-beta.8(@babel/runtime@7.27.0)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(@tanstack/react-query@5.74.4(react@19.1.0))(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))':
+  '@web3auth/modal@10.0.0-beta.12(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@solana/web3.js@1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@hcaptcha/react-hcaptcha': 1.12.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@toruslabs/base-controllers': 8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@web3auth/auth': 10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/no-modal': 10.0.0-beta.8(@babel/runtime@7.27.0)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@tanstack/react-query@5.74.4(react@19.1.0))(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))
+      '@toruslabs/base-controllers': 8.4.6(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@web3auth/auth': 10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/no-modal': 10.0.0-beta.12(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       bowser: 2.11.0
       classnames: 2.5.1
       clsx: 2.1.1
       copy-to-clipboard: 3.3.3
       deepmerge: 4.3.1
-      i18next: 25.0.2(typescript@5.8.3)
+      i18next: 25.2.0(typescript@5.8.3)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
-      react-i18next: 15.5.1(i18next@25.0.2(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      react-i18next: 15.5.1(i18next@25.2.0(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       react-qrcode-logo: 3.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      tailwind-merge: 3.2.0
+      tailwind-merge: 3.3.0
     optionalDependencies:
       '@coinbase/wallet-sdk': 4.3.0
-      '@tanstack/react-query': 5.74.4(react@19.1.0)
-      '@wagmi/core': 2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      wagmi: 2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -5513,52 +5406,49 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@web3auth/no-modal@10.0.0-beta.8(@babel/runtime@7.27.0)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(@tanstack/react-query@5.74.4(react@19.1.0))(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))':
+  '@web3auth/no-modal@10.0.0-beta.12(@babel/runtime@7.27.1)(@coinbase/wallet-sdk@4.3.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       '@ethereumjs/util': 9.1.0
       '@metamask/sdk': 0.32.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@solana/wallet-standard-features': 1.3.0
       '@solana/web3.js': 1.98.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@toruslabs/base-controllers': 8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@toruslabs/bs58': 1.0.0(@babel/runtime@7.27.0)
-      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.0)
+      '@toruslabs/base-controllers': 8.4.6(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/bs58': 1.0.0(@babel/runtime@7.27.1)
+      '@toruslabs/constants': 15.0.0(@babel/runtime@7.27.1)
       '@toruslabs/eccrypto': 6.1.0
-      '@toruslabs/ethereum-controllers': 8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.0)(@sentry/core@9.13.0)
-      '@toruslabs/loglevel-sentry': 8.1.0(@babel/runtime@7.27.0)
-      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@toruslabs/ethereum-controllers': 8.4.7(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(ox@0.6.7(typescript@5.8.3))(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@toruslabs/http-helpers': 8.1.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)
+      '@toruslabs/loglevel-sentry': 8.1.0(@babel/runtime@7.27.1)
+      '@toruslabs/secure-pub-sub': 3.0.2(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@toruslabs/tweetnacl-js': 1.0.4
       '@wallet-standard/app': 1.1.0
       '@wallet-standard/base': 1.1.0
       '@wallet-standard/features': 1.1.0
-      '@walletconnect/sign-client': 2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@walletconnect/types': 2.20.0
-      '@walletconnect/utils': 2.20.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
-      '@web3auth/auth': 10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/ws-embed': 5.0.5(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@walletconnect/sign-client': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@walletconnect/types': 2.20.3
+      '@walletconnect/utils': 2.20.3(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/ws-embed': 5.0.8(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       assert: 2.1.0
-      bignumber.js: 9.2.1
+      bignumber.js: 9.3.0
       bn.js: 5.2.2
       bowser: 2.11.0
       deepmerge: 4.3.1
-      ethers: 6.13.7(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      ethers: 6.14.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       json-rpc-random-id: 1.0.1
       jsonschema: 1.5.0
       jwt-decode: 4.0.0
       loglevel: 1.9.2
       mipd: 0.0.7(typescript@5.8.3)
-      permissionless: 0.2.43(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      permissionless: 0.2.47(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       ripple-keypairs: 1.3.1
       ts-custom-error: 3.3.1
-      viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
       xrpl: 2.14.1(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     optionalDependencies:
       '@coinbase/wallet-sdk': 4.3.0
-      '@tanstack/react-query': 5.74.4(react@19.1.0)
-      '@wagmi/core': 2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
       react: 19.1.0
-      wagmi: 2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
+      viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -5587,11 +5477,11 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@web3auth/ws-embed@5.0.5(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
+  '@web3auth/ws-embed@5.0.8(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)':
     dependencies:
-      '@babel/runtime': 7.27.0
-      '@toruslabs/base-controllers': 8.4.3(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
-      '@web3auth/auth': 10.4.0(@babel/runtime@7.27.0)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@babel/runtime': 7.27.1
+      '@toruslabs/base-controllers': 8.4.6(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@web3auth/auth': 10.4.1(@babel/runtime@7.27.1)(@sentry/core@9.13.0)(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       fast-deep-equal: 3.1.3
       loglevel: 1.9.2
       pump: 3.0.2
@@ -5773,7 +5663,7 @@ snapshots:
 
   big-integer@1.6.52: {}
 
-  bignumber.js@9.2.1: {}
+  bignumber.js@9.3.0: {}
 
   bindings@1.5.0:
     dependencies:
@@ -5794,8 +5684,6 @@ snapshots:
       '@noble/hashes': 1.7.2
 
   bn.js@4.12.1: {}
-
-  bn.js@5.2.1: {}
 
   bn.js@5.2.2: {}
 
@@ -5901,12 +5789,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
-
-  cliui@8.0.1:
-    dependencies:
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 7.0.0
 
   clsx@1.2.1: {}
 
@@ -6069,8 +5951,6 @@ snapshots:
   detect-browser@5.3.0: {}
 
   detect-libc@2.0.3: {}
-
-  diff@5.2.0: {}
 
   dijkstrajs@1.0.3: {}
 
@@ -6247,8 +6127,6 @@ snapshots:
   es6-promisify@5.0.0:
     dependencies:
       es6-promise: 4.2.8
-
-  escalade@3.2.0: {}
 
   escape-string-regexp@4.0.0: {}
 
@@ -6491,7 +6369,7 @@ snapshots:
       '@scure/bip32': 1.6.2
       '@scure/bip39': 1.5.4
 
-  ethers@6.13.7(bufferutil@4.0.9)(utf-8-validate@5.0.10):
+  ethers@6.14.1(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       '@noble/curves': 1.2.0
@@ -6511,18 +6389,6 @@ snapshots:
   eventemitter3@5.0.1: {}
 
   events@3.3.0: {}
-
-  execa@5.1.1:
-    dependencies:
-      cross-spawn: 7.0.6
-      get-stream: 6.0.1
-      human-signals: 2.1.0
-      is-stream: 2.0.1
-      merge-stream: 2.0.0
-      npm-run-path: 4.0.1
-      onetime: 5.1.2
-      signal-exit: 3.0.7
-      strip-final-newline: 2.0.0
 
   extension-port-stream@3.0.0:
     dependencies:
@@ -6635,8 +6501,6 @@ snapshots:
       dunder-proto: 1.0.1
       es-object-atoms: 1.1.1
 
-  get-stream@6.0.1: {}
-
   get-symbol-description@1.1.0:
     dependencies:
       call-bound: 1.0.4
@@ -6732,15 +6596,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  human-signals@2.1.0: {}
-
   humanize-ms@1.2.1:
     dependencies:
       ms: 2.1.3
 
-  i18next@25.0.2(typescript@5.8.3):
+  i18next@25.2.0(typescript@5.8.3):
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
     optionalDependencies:
       typescript: 5.8.3
 
@@ -7108,8 +6970,6 @@ snapshots:
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
-  merge-stream@2.0.0: {}
-
   merge2@1.4.1: {}
 
   micro-ftch@0.3.1: {}
@@ -7118,8 +6978,6 @@ snapshots:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
-
-  mimic-fn@2.1.0: {}
 
   minimalistic-assert@1.0.1: {}
 
@@ -7197,10 +7055,6 @@ snapshots:
 
   normalize-path@3.0.0: {}
 
-  npm-run-path@4.0.1:
-    dependencies:
-      path-key: 3.1.1
-
   obj-multiplex@1.0.0:
     dependencies:
       end-of-stream: 1.4.4
@@ -7267,10 +7121,6 @@ snapshots:
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
-
-  onetime@5.1.2:
-    dependencies:
-      mimic-fn: 2.1.0
 
   optionator@0.9.4:
     dependencies:
@@ -7343,7 +7193,7 @@ snapshots:
 
   path-parse@1.0.7: {}
 
-  permissionless@0.2.43(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)):
+  permissionless@0.2.47(ox@0.6.7(typescript@5.8.3))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)):
     dependencies:
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
     optionalDependencies:
@@ -7402,8 +7252,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@2.8.8: {}
-
   process-nextick-args@2.0.1: {}
 
   process-warning@1.0.0: {}
@@ -7452,11 +7300,11 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
-  react-i18next@15.5.1(i18next@25.0.2(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3):
+  react-i18next@15.5.1(i18next@25.2.0(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3):
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
       html-parse-stringify: 3.0.1
-      i18next: 25.0.2(typescript@5.8.3)
+      i18next: 25.2.0(typescript@5.8.3)
       react: 19.1.0
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)
@@ -7733,8 +7581,6 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  signal-exit@3.0.7: {}
-
   simple-swizzle@0.2.2:
     dependencies:
       is-arrayish: 0.3.2
@@ -7846,8 +7692,6 @@ snapshots:
 
   strip-bom@3.0.0: {}
 
-  strip-final-newline@2.0.0: {}
-
   strip-json-comments@3.1.1: {}
 
   styled-jsx@5.1.6(react@19.1.0):
@@ -7866,6 +7710,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwind-merge@3.2.0: {}
+
+  tailwind-merge@3.3.0: {}
 
   tailwindcss@4.1.4: {}
 
@@ -8206,12 +8052,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  wrap-ansi@7.0.0:
-    dependencies:
-      ansi-styles: 4.3.0
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-
   wrappy@1.0.2: {}
 
   ws@7.5.10(bufferutil@4.0.9)(utf-8-validate@5.0.10):
@@ -8247,7 +8087,7 @@ snapshots:
 
   xrpl@2.14.1(bufferutil@4.0.9)(utf-8-validate@5.0.10):
     dependencies:
-      bignumber.js: 9.2.1
+      bignumber.js: 9.3.0
       bip32: 2.0.6
       bip39: 3.1.0
       https-proxy-agent: 5.0.1
@@ -8266,14 +8106,10 @@ snapshots:
 
   y18n@4.0.3: {}
 
-  y18n@5.0.8: {}
-
   yargs-parser@18.1.3:
     dependencies:
       camelcase: 5.3.1
       decamelize: 1.2.0
-
-  yargs-parser@21.1.1: {}
 
   yargs@15.4.1:
     dependencies:
@@ -8288,16 +8124,6 @@ snapshots:
       which-module: 2.0.1
       y18n: 4.0.3
       yargs-parser: 18.1.3
-
-  yargs@17.7.2:
-    dependencies:
-      cliui: 8.0.1
-      escalade: 3.2.0
-      get-caller-file: 2.0.5
-      require-directory: 2.1.1
-      string-width: 4.2.3
-      y18n: 5.0.8
-      yargs-parser: 21.1.1
 
   yocto-queue@0.1.0: {}
 
