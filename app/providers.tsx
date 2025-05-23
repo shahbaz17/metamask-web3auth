@@ -1,7 +1,7 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useState } from "react";
 
 import { Web3AuthProvider } from "@web3auth/modal/react";
 import { WagmiProvider } from "@web3auth/modal/react/wagmi";
@@ -41,8 +41,7 @@ export function Providers({ children }: Props) {
       config={{
         web3AuthOptions: {
           clientId: process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID!, // Replace with your Client ID
-          web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET,
-          authBuildEnv: "testing", // Optional: Only for alpha/testing
+          web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_MAINNET,
           modalConfig: {
             connectors: {
               [WALLET_CONNECTORS.AUTH]: {
@@ -51,12 +50,12 @@ export function Providers({ children }: Props) {
                   sms_passwordless: {
                     name: "SMS Passwordless",
                     authConnection: AUTH_CONNECTION.SMS_PASSWORDLESS,
-                    authConnectionId: "sms-demo-quickstart",
+                    authConnectionId: "w3a-email-passwordless-demo",
                   },
                   email_passwordless: {
                     name: "Email Passwordless",
                     authConnection: AUTH_CONNECTION.EMAIL_PASSWORDLESS,
-                    authConnectionId: "ep-demo-quickstart",
+                    authConnectionId: "w3a-sms-passwordless-demo",
                   },
                 },
               },
